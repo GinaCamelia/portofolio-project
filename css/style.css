@@ -45,3 +45,33 @@
     --trasition-two: all 1s ease-in-out 0.9;
     --transition-three: all 0.3s ease 0s;
   }
+
+  header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: var(--background);
+    width: 100%;
+    padding: 20px;
+  }
+
+  .logo {
+    background-image: linear linear-gradient(300deg, var(--fourth-color) 0%, var(--first-color) 90%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: bottom;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 600;
+    padding: 10px 5px 10px 50px;
+    border-radius: var(--border-radius);
+    margin: 0 0 0 -20px;
+    line-height: 1;
+    font-size: 35px;
+  }
+
+  .logo:hover {
+    cursor: pointer;
+    background-size: 100% 100%;
+    color: var(--fourth-color);
+    transition: var(--transition-three);
+  }
