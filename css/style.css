@@ -113,3 +113,28 @@
     color: var(--fourth-color);
     transition: var(--transition-three);
   }
+
+  .hero-banner {
+    background-image: url(../resources/images/02-hero-bg.jpg);
+    background-color: var(--background);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    width: auto;
+    min-height: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 30px 50px;
+  }
+
+  .hero-banner h2 {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 600;
+    color: var(--fourth-color);
+    background-color: var(--first-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    line-height: 1.5;
+  }
