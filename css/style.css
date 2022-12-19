@@ -63,7 +63,7 @@
     margin: 0 0 0 -20px;
     line-height: 1;
     font-size: 35px;
-    background-image: linear linear-gradient(300deg, var(--fourth-color) 0%, var(--first-color) 90%);
+    background-image: linear-gradient(300deg, var(--fourth-color) 0%, var(--first-color) 90%);
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
     background-position: bottom;
