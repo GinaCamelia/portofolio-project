@@ -181,3 +181,65 @@
     font-size: 20px;
     line-height: 1.5;
   }
+
+  #grid-area {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 150px 150px;
+    grid-template-areas:
+    "project1 project1"
+    "project2 project3"
+    "project4 project5"
+  }
+
+  #project1 {
+    grid-area: project1; 
+    background-image: url(../resources/images/02-portfolio-4.jpg);
+  }
+
+  #project2 {
+    grid-area: project2; 
+    background-image: url(../resources/images/02-portfolio-1.jpg);
+  }
+
+  #project3 {
+    grid-area: project3; 
+    background-image: url(../resources/images/02-portfolio-2.jpg);
+  }
+
+  #project4 {
+    grid-area: project4; 
+    background-image: url(../resources/images/02-portfolio-3.jpg);
+  }
+
+  #project5 {
+    grid-area: project5; 
+    background-image: url(../resources/images/02-portofolio-5.jpg);
+  }
+
+  .portfolio-container {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    align-content: end;
+    padding-bottom: 15px;
+    border-radius: var(--border-radius);
+  }
+
+  .portfolio-container:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: var(--transition-three);
+  }
+
+  .project {
+    max-width: 250px;
+    color: var(--fourth-color);
+    background-color: var(--first-color);
+    border-radius: var(--border-radius);
+    margin-left: 5px;
+    padding-left: 5px;
+
+  }
