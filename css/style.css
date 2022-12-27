@@ -42,7 +42,7 @@
     --fourth-color:  #b8e1dd; 
     --border-radius: 5px;
     --transition: all 0.3s ease-in-out 0.1s;
-    --trasition-two: all 1s ease-in-out 0.9;
+    --trasition-two: all 1000ms ease-in-out 0.9;
     --transition-three: all 0.3s ease 0s;
   }
 
@@ -80,7 +80,11 @@
     padding: 0px;
     color: var(--fourth-color);
   }
-  
+
+  header a {
+    color:var(--first-color);
+  }
+
   .nav-links {
     display: flex;
     flex-wrap: wrap;
@@ -277,3 +281,15 @@
       justify-content: right;
       align-items: center;
   }
+
+
+  /* @media screen and (max-width: 768px) {
+  }
+
+  @media screen and (max-width: 1200px) {
+    
+  }
+  
+@media screen and (max-widh: 576px) {
+    }
+  */
