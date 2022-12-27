@@ -1,3 +1,5 @@
+/* Universal styling */
+
 * {
     box-sizing: border-box;
   }
@@ -46,43 +48,39 @@
     --transition-three: all 0.3s ease 0s;
   }
 
+  /* Logo and nav section */
   header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
     background: var(--background);
     width: 100%;
     padding: 20px;
   }
 
+  header a {
+    color:var(--first-color);
+  }
+
   .logo {
     font-family: 'Source Serif Pro', serif;
     font-weight: 600;
-    padding: 10px 5px 10px 50px;
+    padding: 15px 20px 10px 50px;
     border-radius: var(--border-radius);
     margin: 0 0 0 -20px;
     line-height: 1;
     font-size: 35px;
-    background-image: linear-gradient(300deg, var(--fourth-color) 0%, var(--first-color) 90%);
-    background-repeat: no-repeat;
-    background-size: 100% 0.2em;
-    background-position: bottom;
   }
 
   .logo:hover {
     cursor: pointer;
-    background-size: 100% 100%;
     color: var(--fourth-color);
     transition: var(--transition-three);
   }
 
   h1 .logo {
-    padding: 0px;
     color: var(--fourth-color);
-  }
-
-  header a {
-    color:var(--first-color);
   }
 
   .nav-links {
@@ -118,30 +116,22 @@
     transition: var(--transition-three);
   }
 
+  /* hero section */
+
   .hero-banner {
-    background-image: url(../resources/images/02-hero-bg.jpg);
+    background-image: url(../resources/images/gina.jpg);
     background-color: var(--background);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-blend-mode: luminosity;
-    width: auto;
-    min-height: 200px;
+    height: 800px;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 30px 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
-  .hero-banner h2 {
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 600;
-    color: var(--fourth-color);
-    background-color: var(--first-color);
-    padding: 10px 20px;
-    border-radius: var(--border-radius);
-    line-height: 1.5;
-  }
+  /* main page wrapper */
 
   .page-wrapper {
     max-width: 88%;
@@ -149,6 +139,7 @@
     margin-left: auto;
   }
 
+  /* about me section */
   .page-section {
     margin: 50px 0;
     padding: 10px 0;
@@ -172,19 +163,19 @@
 
   .page-section > div {
     flex: 0 0 80%;
-  }
-
-  .page-section > p {
-    margin-bottom: 15px;
-  }
-
-  .page-section > * {
     padding-left: 40px;
     font-family: 'Source Serif Pro', serif;
     font-weight: 200;
     font-size: 20px;
     line-height: 1.5;
   }
+
+  .page-section > p {
+    margin-bottom: 15px;
+  }
+
+
+  /* portfolio container */
 
   #grid-area {
     display: grid;
@@ -248,38 +239,52 @@
 
   }
 
+  /* contact  */
+  
+  footer {
+    margin: 100px 0 0 0;
+    background-color: var(--fourth-color);
+    width: 100%;
+  }
+
   .contact address {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 100%;
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 300;
+  }
+
+  h2.contact-me {
+    font-size: 32px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
   }
 
   .contact address a {
     color: var(--first-color);
-    padding: 5px 15px;
-    font-size: 22px;
-    background-image: linear-gradient(500deg, var(--fourth-color) 0%, var(--first-color) 100%);
+    font-size: 40px;
+    /* background-image: linear-gradient(500deg, var(--fourth-color) 0%, var(--first-color) 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
-    background-position: bottom;
+    background-position: bottom; */
     border-radius: var(--border-radius);
+    margin: 60px;
   }
   
   .contact address a:hover {
-    color: var(--fourth-color);
+    color: var(--third-color);
     background-size: 100% 100%;
     transition: var(--transition);
   }
   
   .page-section .contact-me {
-      display: flex;
-      flex-direction: row;
-      justify-content: right;
-      align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
   }
 
 
