@@ -1,8 +1,4 @@
 /* Universal styling */
-
-* {
-    box-sizing: border-box;
-  }
   *, *::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -10,11 +6,13 @@
   }
   
   body {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 200;
     background-color: var(--background); 
-    opacity: 0.9;
     margin: 0;
     padding: 0;
     line-height: 1.5;
+
   }
   
   h1,
@@ -52,74 +50,61 @@
   header {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background: var(--background);
+    position: fixed;
+    z-index: 999;
+    background: var(--fourth-color);
     width: 100%;
-    padding: 20px;
+    padding: 10px;
   }
 
-  header a {
-    color:var(--first-color);
+  header .logo {
+    color: var(--first-color);
   }
 
-  .logo {
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 600;
-    padding: 15px 20px 10px 50px;
-    border-radius: var(--border-radius);
-    margin: 0 0 0 -20px;
-    line-height: 1;
-    font-size: 35px;
+  nav {
+    background-color: var(--fourth-color);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
   }
 
-  .logo:hover {
-    cursor: pointer;
-    color: var(--fourth-color);
-    transition: var(--transition-three);
-  }
-
-  h1 .logo {
-    color: var(--fourth-color);
-  }
-
-  .nav-links {
+  nav ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column;
+    align-items: flex-end;
+    text-align: left;
+    margin: 0 20px 0 0;
+    padding: 0;
     list-style: none;
   }
-  
-  .nav-links li {
-    padding: 0px 10px;
+
+  nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;;
   }
-  
-  .nav-links a {
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 600;
+
+  nav a {
+    color: var(--third-color)
     text-decoration: none;
-    transition: all 0.3s ease 0s;
-    color: black;
-    font-weight: 600;
-    font-size: 19px;
-    border-radius: var(--border-radius);
-    padding: 15px;
-    background-image: linear-gradient(270deg, var(--fourth-color) 0%, var(--first-color) 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0.2em;
-    background-position: bottom;
-    text-transform: capitalize;
+    font-size: 1.2rem;
+    text-transform: uppercase;
   }
+
+  nav a:hover {
+    color: white;
+  }
+
+
+
   
-  .nav-links a:hover {
-    background-size: 100% 100%;
-    color: var(--fourth-color);
-    transition: var(--transition-three);
-  }
 
   /* hero section */
 
   .hero-banner {
-    background-image: url(../resources/images/gina.jpg);
+    background-image: url(../resources/images/02-hero-bg.jpg);
     background-color: var(--background);
     background-size: cover;
     background-position: center;
