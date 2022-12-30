@@ -135,7 +135,7 @@
   }
 
   nav a {
-    color: var(--third-color);
+    color: var(--first-color);
     text-decoration: none;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -160,7 +160,7 @@
   /* hero section */
 
   .hero-banner {
-    background-image: url(../resources/images/02-hero-bg.jpg);
+    background-image: url(../resources/images/gina.jpg);
     background-color: var(--background);
     background-size: cover;
     background-position: center;
@@ -328,8 +328,61 @@
 
 
   @media screen and (min-width: 800px) {
+    .nav-toggle-label {
+      display: none;
+    }
 
+    header {
+      display: grid;
+    }
+
+    .logo {
+      grid-column: 2 / 3;
+    }
     
+    nav {
+      position: relative;
+      text-align: left;
+      transition: none;
+      transform: scale(1,1);
+      background: none;
+      top: initial;
+      left: initial;
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 3em;
+      margin-bottom: 0;
+    }
+
+    nav a {
+      opacity: 1;
+      position: relative;
+    }
+
+    nav a::before {
+      content: '';
+      display: block;
+      height: 5px;
+      position: absolute;
+      top: -.75em;
+      left: 0;
+      right: 0;
+      transform: scale(0,1);
+      transition: transform ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+      transform: scale(1,1);
+    }
   }
 
   @media screen and (max-width: 800px) {
@@ -343,5 +396,15 @@
       "project4"
       "project5"
       ;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .page-wrapper {
+      width: 100%;
+    }
+
+    .hero-banner {
+      background-position: center;
     }
   }
